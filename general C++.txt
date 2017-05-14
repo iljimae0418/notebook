@@ -1,6 +1,15 @@
-// example of printing to n decimal places. Below prints sqrt(5) to 2 d.p.
+1) Example of printing to n decimal places. Below prints sqrt(5) to 2 d.p.
 double ret = sqrt(5);  
 cout.setf(ios::fixed); 
 cout.setf(ios::showpoint); 
 cout.precision(2); 
 cout << ret << endl;  
+
+2) Generating random doubles in range [a,b]. There is also an integer equivalent (std::uniform_int_distribution<int> distribution(0, x)); 
+#include <random>
+double randomRange(double lb,double ub){ // returns random double value in range [lb,ub]
+	random_device rd; 
+	default_random_engine generator(rd()); 
+	uniform_real_distribution<double> distribution(lb,ub);  
+	return distribution(generator); 
+}
