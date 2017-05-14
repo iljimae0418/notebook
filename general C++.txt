@@ -1,0 +1,6 @@
+// example of printing to n decimal places. Below prints sqrt(5) to 2 d.p.
+double ret = sqrt(5);  
+cout.setf(ios::fixed); 
+cout.setf(ios::showpoint); 
+cout.precision(2); 
+cout << ret << endl;  
